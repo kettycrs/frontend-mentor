@@ -1,0 +1,97 @@
+:root {
+    --cor-fundo: hsl(0, 0%, 8%);
+    --cor-quadro: hsl(0, 0%, 12%);
+    --cor-botoes: hsl(0, 0%, 20%);
+    --cor-nomes-cargos: hsl(0, 0%, 100%);
+    --cor-local: hsl(75, 94%, 57%);
+    --fonte-geral: 'Inter', sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-nomes-cargos);
+    font-family: var(--fonte-geral);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* centralizar vertical */
+}
+
+/* Card principal */
+.card {
+    background-color: var(--cor-quadro);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+}
+
+/* Foto de perfil */
+.perfil {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Nome */
+.nome {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Local */
+.local {
+    color: var(--cor-local);
+    font-size: 14px;
+    margin: 6px 0 16px;
+    font-weight: 500;
+}
+
+/* Cargo */
+.cargo {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    color: var(--cor-nomes-cargos);
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.botao {
+    display: block;
+    background-color: var(--cor-botoes);
+    color: var(--cor-nomes-cargos);
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao:hover {
+    background-color: var(--cor-local);
+    color: var(--cor-fundo);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 410px){
+    .card{
+        padding: 24px;
+    }
+}
