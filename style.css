@@ -1,97 +1,45 @@
-:root {
-    --cor-fundo: hsl(0, 0%, 8%);
-    --cor-quadro: hsl(0, 0%, 12%);
-    --cor-botoes: hsl(0, 0%, 20%);
-    --cor-nomes-cargos: hsl(0, 0%, 100%);
-    --cor-local: hsl(75, 94%, 57%);
-    --fonte-geral: 'Inter', sans-serif;
+:root{
+    --cor-do-fundo:hsl(212, 45%, 89%);
+    --cor-do-titulo:hsl(218, 44%, 22%);
+    --cor-do-texto:hsl(216, 15%, 48%);
+    --cor-do-cartao:#ffffff;
+    --fonte-geral: 'Outfit';
 }
 
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-nomes-cargos);
-    font-family: var(--fonte-geral);
+body{
+    font-family: 'Outfit';
+    background-color: var(--cor-do-fundo);
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* centralizar vertical */
+    margin: 15%;
 }
 
-/* Card principal */
-.card {
-    background-color: var(--cor-quadro);
-    padding: 40px;
-    border-radius: 12px;
+.cartao{
+    margin: auto;
+    border-radius: 15px;
+    background-color: var(--cor-do-cartao);
     text-align: center;
-    width: 320px;
+    max-width: 320px;
+    padding: 16px;
 }
 
-/* Foto de perfil */
-.perfil {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
+.cartao__codigo{
+    border-radius: 3%;
+    width: 100%;
+    display: block;
     margin-bottom: 20px;
 }
 
-/* Nome */
-.nome {
-    font-size: 22px;
-    font-weight: 600;
+.cartao__titulo{
+    color: var(--cor-do-titulo);
 }
 
-/* Local */
-.local {
-    color: var(--cor-local);
-    font-size: 14px;
-    margin: 6px 0 16px;
-    font-weight: 500;
+.cartao__texto{
+    color: var(--cor-do-texto);
 }
 
-/* Cargo */
-.cargo {
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 25px;
-    color: var(--cor-nomes-cargos);
-}
+@media (max-width:450px) {
 
-/* Botões */
-.botoes {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.botao {
-    display: block;
-    background-color: var(--cor-botoes);
-    color: var(--cor-nomes-cargos);
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 12px;
-    border-radius: 8px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.botao:hover {
-    background-color: var(--cor-local);
-    color: var(--cor-fundo);
-    transform: translateY(-2px);
-}
-
-@media (max-width: 410px){
-    .card{
-        padding: 24px;
-    }
 }
