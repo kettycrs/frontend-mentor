@@ -1,45 +1,182 @@
 :root{
-    --cor-do-fundo:hsl(212, 45%, 89%);
-    --cor-do-titulo:hsl(218, 44%, 22%);
-    --cor-do-texto:hsl(216, 15%, 48%);
-    --cor-do-cartao:#ffffff;
-    --fonte-geral: 'Outfit';
+    --cor-do-fundo:hsl(30, 54%, 90%);
+    --cor-do-cartao:hsl(0, 0%, 100%);
+    --cor-do-titulo:hsl(24, 5%, 18%);
+    --cor-do-texto:hsl(30, 18%, 87%);
+    --cor-do-subtitulo:hsl(332, 51%, 32%);
+    --cor-do-negrito-do-texto:hsl(30, 10%, 34%);
+    --cor-do-quadro-menor:  hsl(330, 100%, 98%);
+    --cor-do-titulo-ingredientes:hsl(14, 45%, 36%);
+    --fonte--principal: 'Young Serif';
+    --fonte-secundaria: 'Outfit';
 }
 
-
 body{
-    font-family: 'Outfit';
-    background-color: var(--cor-do-fundo);
+    background-color:var(--cor-do-fundo);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15%;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 10%;
 }
 
-.cartao{
-    margin: auto;
-    border-radius: 15px;
+.card{
+    padding: 40px;
+    border-radius: 20px;
     background-color: var(--cor-do-cartao);
+    width: 55%;
     text-align: center;
-    max-width: 320px;
-    padding: 16px;
 }
 
-.cartao__codigo{
-    border-radius: 3%;
-    width: 100%;
+.receita__img{
+    border-radius: 10px;
+    max-width: 100%;
     display: block;
-    margin-bottom: 20px;
 }
 
-.cartao__titulo{
+.receita__titulo{
+    font-family: var(--fonte--principal);
+    text-align: left;
+    font-size: 35px;
+    font-weight: 400;
     color: var(--cor-do-titulo);
 }
 
-.cartao__texto{
+.receita__texto{
+    font-family: var(--fonte-secundaria);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--cor-do-titulo);
+}
+
+.preparacao{
+    border-radius: 18px;
+    background-color: var(--cor-do-quadro-menor);
+    text-align: left;
+    padding: 15px;
+    width: 95%;
+}
+
+.preparacao__titulo{
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cor-do-subtitulo);
+}
+
+.preparacao__lista{
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-do-negrito-do-texto);
+}
+
+.preparacao__lista__strong{
+    font-weight: 600;
+}
+
+.preparacao li{
+    justify-content: space-between;
+}
+
+.ingredientes{
+    text-align: left;
+}
+
+.ingredientes__titulo{
+    font-family: var(--fonte--principal);
+    font-weight: 50;
+    font-size: 25px;
+    color: var(--cor-do-titulo-ingredientes);
+}
+
+.ingredientes__lista{
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    color: var(--cor-do-negrito-do-texto);
+}
+
+.ingredientes li{
+    justify-content: space-between;
+}
+
+.instrucoes{
+    text-align: left;
+}
+
+.instrucoes__titulo{
+    font-family: var(--fonte--principal);
+    font-weight: 50;
+    font-size: 25px;
+    color: var(--cor-do-titulo-ingredientes);
+}
+
+.instrucoes__lista{
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    color: var(--cor-do-negrito-do-texto);
+}
+
+.instrucoes li{
+    justify-content: space-between;
+}
+
+.nutricional{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px;
+    border: 1px
+}
+
+.nutricional li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.nutricional li:last-child{
+    border-bottom: none;
+}
+
+.nutricional span{
+    color: #444;
+}
+
+.nutricional strong{
+    font-weight: 600;
     color: var(--cor-do-texto);
 }
 
-@media (max-width:450px) {
+.nutricional__titulo{
+    text-align: left;
+    font-family: var(--fonte--principal);
+    font-weight: 50;
+    font-size: 25px;
+    color: var(--cor-do-titulo-ingredientes);
+}
 
+.nutricional__texto{
+    text-align: left;
+    font-family: var(--fonte-secundaria);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--cor-do-titulo);
+}
+
+.nutricional__tabela{
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+    font-weight: 300;
+    color: var(--cor-do-negrito-do-texto);
+}
+
+hr{
+    color: var(--cor-do-texto);
+}
+
+.valor{
+    font-weight: 600;
 }
